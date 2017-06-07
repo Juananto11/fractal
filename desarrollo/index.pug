@@ -18,18 +18,28 @@ body
     p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste, amet.
     .animacion
 
-  main
-    section.detalle
+  main.contenedor
+    section.detalle.menu
       h2 Lorem ipsum dolor
       p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero fugit asperiores quod numquam obcaecati deleniti vel harum. Eius tenetur doloribus suscipit enim minima ad quidem voluptatem aut asperiores, iste rerum.
       .rayita
       nav.menu
         ul
-          li(href="#") icono1
-          li(href="#") icono2
-          li(href="#") icono3
-          li(href="#") icono4
-          li(href="#") icono5
+          li
+            a(href="#")
+              img(src="./public/images/html.png", alt="")
+          li
+            a(href="#")
+              img(src="./public/images/css.png", alt="")
+          li
+            a(href="#")
+              img(src="./public/images/js.png", alt="")
+          li
+            a(href="#")
+              img(src="./public/images/pug.svg", alt="")
+          li
+            a(href="#")
+              img(src="./public/images/stylus.png", alt="")
 
     section.detalle
       figure.logo
@@ -69,7 +79,7 @@ body
         li  Lorem ipsum dolor.
         li  Lorem ipsum dolor.
 
-    section.contacto
+    section.detalle.contacto
       h3 Lorem ipsum dolor sit.
       p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat rerum, reprehenderit sit, voluptatum harum alias molestias unde totam ex dolorum! Voluptatibus dicta, adipisci debitis iusto.
 
@@ -81,12 +91,16 @@ body
         label(for="") Comentarios
         textarea(name="", cols="30", rows="10")
 
-    footer.pie
-      nav.redes
-        ul
-          li(href="#") red1
-          li(href="#") red2
-          li(href="#") red3
-          li(href="#") red4
+  footer.pie
+    nav.redes
+      ul
+        li
+          a(href="#") red1
+        li
+          a(href="#") red2
+        li
+          a(href="#") red3
+        li
+          a(href="#") red4
 
-      p &copy; Lorem ipsum dolor sit amet, consectetur.
+    p &copy; Lorem ipsum dolor sit amet, consectetur.

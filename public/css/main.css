@@ -1,12 +1,14 @@
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
 @font-face {
   font-family: 'iconos';
   src: url("../fonts/icomoon.eot?2w6nnh");
   src: url("../fonts/icomoon.eot?2w6nnh#iefix") format('embedded-opentype'), url("../fonts/icomoon.ttf?2w6nnh") format('truetype'), url("../fonts/icomoon.woff?2w6nnh") format('woff'), url("../fonts/icomoon.svg?2w6nnh#icomoon") format('svg');
-}
-*,
-*:before,
-*:after {
-  box-sizing: border-box;
 }
 body {
   background: #f8f8f8;
@@ -16,6 +18,10 @@ body {
   font-family: 'Lato', sans-serif;
 }
 .cabecera {
+  background: -webkit-repeating-linear-gradient(45deg, transparent 0%, 15%, rgba(248,248,248,0.1) 15%, 15.1%, transparent 15.3%), -webkit-linear-gradient(135deg, #00b2a6 0%, #012440 100%);
+  background: -moz-repeating-linear-gradient(45deg, transparent 0%, 15%, rgba(248,248,248,0.1) 15%, 15.1%, transparent 15.3%), -moz-linear-gradient(135deg, #00b2a6 0%, #012440 100%);
+  background: -o-repeating-linear-gradient(45deg, transparent 0%, 15%, rgba(248,248,248,0.1) 15%, 15.1%, transparent 15.3%), -o-linear-gradient(135deg, #00b2a6 0%, #012440 100%);
+  background: -ms-repeating-linear-gradient(45deg, transparent 0%, 15%, rgba(248,248,248,0.1) 15%, 15.1%, transparent 15.3%), -ms-linear-gradient(135deg, #00b2a6 0%, #012440 100%);
   background: repeating-linear-gradient(45deg, transparent 0%, 15%, rgba(248,248,248,0.1) 15%, 15.1%, transparent 15.3%), linear-gradient(-45deg, #00b2a6 0%, #012440 100%);
   display: flex;
   flex-direction: column;
@@ -23,6 +29,38 @@ body {
   padding: 4em 2em;
   color: #f8f8f8;
   text-align: center;
+  -webkit-box-shadow: 0 0 10px #000;
+  box-shadow: 0 0 10px #000;
+  position: relative;
+  margin-bottom: 1em;
+}
+.cabecera::before,
+.cabecera::after {
+  content: "";
+  display: block;
+  width: 60%;
+  height: 10px;
+  position: absolute;
+  bottom: 7px;
+  -webkit-box-shadow: 0 11px 6px #808080;
+  box-shadow: 0 11px 6px #808080;
+  z-index: -1;
+}
+.cabecera::before {
+  right: 0;
+  -webkit-transform: rotate(3deg) skewX(10deg);
+  -moz-transform: rotate(3deg) skewX(10deg);
+  -o-transform: rotate(3deg) skewX(10deg);
+  -ms-transform: rotate(3deg) skewX(10deg);
+  transform: rotate(3deg) skewX(10deg);
+}
+.cabecera::after {
+  left: 0;
+  -webkit-transform: rotate(-3deg) skewX(-10deg);
+  -moz-transform: rotate(-3deg) skewX(-10deg);
+  -o-transform: rotate(-3deg) skewX(-10deg);
+  -ms-transform: rotate(-3deg) skewX(-10deg);
+  transform: rotate(-3deg) skewX(-10deg);
 }
 .cabecera h1 {
   font-weight: 900;
@@ -57,6 +95,8 @@ body {
 }
 .centro {
   background: url("../images/yo.jpg");
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
   background-size: cover;
   background-position: center;
   height: inherit;
@@ -91,7 +131,77 @@ body {
   font-size: 2em;
   font-weight: 900;
   position: relative;
+  -webkit-animation: 1s animacion infinite;
+  -moz-animation: 1s animacion infinite;
+  -o-animation: 1s animacion infinite;
+  -ms-animation: 1s animacion infinite;
   animation: 1s animacion infinite;
+}
+.detalle {
+  background: #f8f8f8;
+  padding: 0 0.8em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  margin-bottom: 1em;
+}
+.detalle::before,
+.detalle::after {
+  content: "";
+  display: block;
+  width: 60%;
+  height: 10px;
+  position: absolute;
+  bottom: 7px;
+  -webkit-box-shadow: 0 11px 6px #808080;
+  box-shadow: 0 11px 6px #808080;
+  z-index: -1;
+}
+.detalle::before {
+  right: 0;
+  -webkit-transform: rotate(3deg) skewX(10deg);
+  -moz-transform: rotate(3deg) skewX(10deg);
+  -o-transform: rotate(3deg) skewX(10deg);
+  -ms-transform: rotate(3deg) skewX(10deg);
+  transform: rotate(3deg) skewX(10deg);
+}
+.detalle::after {
+  left: 0;
+  -webkit-transform: rotate(-3deg) skewX(-10deg);
+  -moz-transform: rotate(-3deg) skewX(-10deg);
+  -o-transform: rotate(-3deg) skewX(-10deg);
+  -ms-transform: rotate(-3deg) skewX(-10deg);
+  transform: rotate(-3deg) skewX(-10deg);
+}
+.detalle h2,
+.detalle h3,
+.detalle p {
+  text-align: center;
+}
+.menu {
+  width: 100%;
+  padding: 0 1em;
+}
+.menu ul {
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
+}
+.menu li {
+  list-style: none;
+}
+.menu a {
+  display: block;
+  text-decoration: none;
+}
+.menu img {
+  width: 40px;
+}
+.rayita {
+  width: 100px;
+  height: 2px;
+  background: #d3d3d3;
 }
 @-moz-keyframes animacion {
   0% {
