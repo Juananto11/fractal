@@ -1,0 +1,151 @@
+@font-face {
+  font-family: 'iconos';
+  src: url("../fonts/icomoon.eot?2w6nnh");
+  src: url("../fonts/icomoon.eot?2w6nnh#iefix") format('embedded-opentype'), url("../fonts/icomoon.ttf?2w6nnh") format('truetype'), url("../fonts/icomoon.woff?2w6nnh") format('woff'), url("../fonts/icomoon.svg?2w6nnh#icomoon") format('svg');
+}
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+body {
+  background: #f8f8f8;
+  padding: 0;
+  margin: 0;
+  font-size: 16px;
+  font-family: 'Lato', sans-serif;
+}
+.cabecera {
+  background: repeating-linear-gradient(45deg, transparent 0%, 15%, rgba(248,248,248,0.1) 15%, 15.1%, transparent 15.3%), linear-gradient(-45deg, #00b2a6 0%, #012440 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 4em 2em;
+  color: #f8f8f8;
+  text-align: center;
+}
+.cabecera h1 {
+  font-weight: 900;
+  margin: 1.5em 0;
+}
+.cabecera p {
+  margin: 0;
+  font-weight: 400;
+}
+.avatar {
+  width: 150px;
+  height: 270px;
+  border: 1px solid #00b2a6;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+.arriba {
+  width: 100%;
+  height: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.arriba::before {
+  content: "";
+  display: block;
+  width: 20px;
+  height: 1px;
+  background: #00b2a6;
+}
+.centro {
+  background: url("../images/yo.jpg");
+  background-size: cover;
+  background-position: center;
+  height: inherit;
+  border-top: 1px solid #00b2a6;
+  border-bottom: 1px solid #00b2a6;
+}
+.abajo {
+  width: 100%;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.abajo::before {
+  content: "";
+  display: block;
+  width: 15px;
+  height: 15px;
+  border: 1px solid #00b2a6;
+  border-radius: 50%;
+}
+.animacion {
+  font-family: "iconos";
+  width: 32px;
+  height: 64px;
+  position: relative;
+  top: 30px;
+  overflow: hidden;
+}
+.animacion::before {
+  content: "\e902";
+  font-size: 2em;
+  font-weight: 900;
+  position: relative;
+  animation: 1s animacion infinite;
+}
+@-moz-keyframes animacion {
+  0% {
+    top: 0%;
+  }
+  40% {
+    top: 50%;
+  }
+  60% {
+    top: 50%;
+  }
+  100% {
+    top: 0%;
+  }
+}
+@-webkit-keyframes animacion {
+  0% {
+    top: 0%;
+  }
+  40% {
+    top: 50%;
+  }
+  60% {
+    top: 50%;
+  }
+  100% {
+    top: 0%;
+  }
+}
+@-o-keyframes animacion {
+  0% {
+    top: 0%;
+  }
+  40% {
+    top: 50%;
+  }
+  60% {
+    top: 50%;
+  }
+  100% {
+    top: 0%;
+  }
+}
+@keyframes animacion {
+  0% {
+    top: 0%;
+  }
+  40% {
+    top: 50%;
+  }
+  60% {
+    top: 50%;
+  }
+  100% {
+    top: 0%;
+  }
+}
