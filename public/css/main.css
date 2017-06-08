@@ -1,14 +1,14 @@
+@font-face {
+  font-family: 'iconos';
+  src: url("../fonts/icomoon.eot?2w6nnh");
+  src: url("../fonts/icomoon.eot?2w6nnh#iefix") format('embedded-opentype'), url("../fonts/icomoon.ttf?2w6nnh") format('truetype'), url("../fonts/icomoon.woff?2w6nnh") format('woff'), url("../fonts/icomoon.svg?2w6nnh#icomoon") format('svg');
+}
 *,
 *:before,
 *:after {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-}
-@font-face {
-  font-family: 'iconos';
-  src: url("../fonts/icomoon.eot?2w6nnh");
-  src: url("../fonts/icomoon.eot?2w6nnh#iefix") format('embedded-opentype'), url("../fonts/icomoon.ttf?2w6nnh") format('truetype'), url("../fonts/icomoon.woff?2w6nnh") format('woff'), url("../fonts/icomoon.svg?2w6nnh#icomoon") format('svg');
 }
 body {
   background: #f8f8f8;
@@ -26,13 +26,13 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 4em 2em;
+  padding: 2.6em 2em;
   color: #f8f8f8;
   text-align: center;
   -webkit-box-shadow: 0 0 10px #000;
   box-shadow: 0 0 10px #000;
   position: relative;
-  margin-bottom: 1em;
+  margin-bottom: 2em;
 }
 .cabecera::before,
 .cabecera::after {
@@ -64,15 +64,15 @@ body {
 }
 .cabecera h1 {
   font-weight: 900;
-  margin: 1.5em 0;
+  margin: 1em 0;
 }
 .cabecera p {
   margin: 0;
   font-weight: 400;
 }
 .avatar {
-  width: 150px;
-  height: 270px;
+  width: 120px;
+  height: 200px;
   border: 1px solid #00b2a6;
   border-radius: 10px;
   display: flex;
@@ -123,7 +123,7 @@ body {
   width: 32px;
   height: 64px;
   position: relative;
-  top: 30px;
+  top: 15px;
   overflow: hidden;
 }
 .animacion::before {
@@ -144,7 +144,7 @@ body {
   flex-direction: column;
   align-items: center;
   position: relative;
-  margin-bottom: 1em;
+  margin-bottom: 2em;
 }
 .detalle::before,
 .detalle::after {
@@ -178,6 +178,10 @@ body {
 .detalle h3,
 .detalle p {
   text-align: center;
+  margin: 0.5em;
+}
+.detalle p {
+  padding-bottom: 1.5em;
 }
 .menu {
   width: 100%;
@@ -202,6 +206,141 @@ body {
   width: 100px;
   height: 2px;
   background: #d3d3d3;
+  margin: 0.8em;
+}
+.logo {
+  width: 100%;
+}
+.logo img {
+  width: 70%;
+  margin: 0 auto;
+  display: block;
+}
+.habilidades ul {
+  padding: 0 0 0.5em;
+  margin: 0.5em 0 1.5em 0s;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.habilidades li {
+  background: #012440;
+  width: 80%;
+  height: 1em;
+  margin: 1em;
+  position: relative;
+  overflow: hidden;
+}
+.habilidades li:nth-child(1)::after {
+  content: "";
+  background: #00b2a6;
+  display: block;
+  width: 20px;
+  height: 1em;
+  position: absolute;
+  left: -1%;
+  top: 0;
+  z-index: 1;
+  border-radius: 50%;
+  -webkit-animation: 1s preload infinite;
+  -moz-animation: 1s preload infinite;
+  -o-animation: 1s preload infinite;
+  -ms-animation: 1s preload infinite;
+  animation: 1s preload infinite;
+  -webkit-animation-delay: 0.2s;
+  -moz-animation-delay: 0.2s;
+  -o-animation-delay: 0.2s;
+  -ms-animation-delay: 0.2s;
+  animation-delay: 0.2s;
+}
+.habilidades li:nth-child(2)::after {
+  content: "";
+  background: #00b2a6;
+  display: block;
+  width: 20px;
+  height: 1em;
+  position: absolute;
+  left: -1%;
+  top: 0;
+  z-index: 1;
+  border-radius: 50%;
+  -webkit-animation: 1s preload infinite;
+  -moz-animation: 1s preload infinite;
+  -o-animation: 1s preload infinite;
+  -ms-animation: 1s preload infinite;
+  animation: 1s preload infinite;
+  -webkit-animation-delay: 0.4s;
+  -moz-animation-delay: 0.4s;
+  -o-animation-delay: 0.4s;
+  -ms-animation-delay: 0.4s;
+  animation-delay: 0.4s;
+}
+.habilidades li:nth-child(3)::after {
+  content: "";
+  background: #00b2a6;
+  display: block;
+  width: 20px;
+  height: 1em;
+  position: absolute;
+  left: -1%;
+  top: 0;
+  z-index: 1;
+  border-radius: 50%;
+  -webkit-animation: 1s preload infinite;
+  -moz-animation: 1s preload infinite;
+  -o-animation: 1s preload infinite;
+  -ms-animation: 1s preload infinite;
+  animation: 1s preload infinite;
+  -webkit-animation-delay: 0.6s;
+  -moz-animation-delay: 0.6s;
+  -o-animation-delay: 0.6s;
+  -ms-animation-delay: 0.6s;
+  animation-delay: 0.6s;
+}
+.habilidades li:nth-child(4)::after {
+  content: "";
+  background: #00b2a6;
+  display: block;
+  width: 20px;
+  height: 1em;
+  position: absolute;
+  left: -1%;
+  top: 0;
+  z-index: 1;
+  border-radius: 50%;
+  -webkit-animation: 1s preload infinite;
+  -moz-animation: 1s preload infinite;
+  -o-animation: 1s preload infinite;
+  -ms-animation: 1s preload infinite;
+  animation: 1s preload infinite;
+  -webkit-animation-delay: 0.8s;
+  -moz-animation-delay: 0.8s;
+  -o-animation-delay: 0.8s;
+  -ms-animation-delay: 0.8s;
+  animation-delay: 0.8s;
+}
+.habilidades li:nth-child(5)::after {
+  content: "";
+  background: #00b2a6;
+  display: block;
+  width: 20px;
+  height: 1em;
+  position: absolute;
+  left: -1%;
+  top: 0;
+  z-index: 1;
+  border-radius: 50%;
+  -webkit-animation: 1s preload infinite;
+  -moz-animation: 1s preload infinite;
+  -o-animation: 1s preload infinite;
+  -ms-animation: 1s preload infinite;
+  animation: 1s preload infinite;
+  -webkit-animation-delay: 1s;
+  -moz-animation-delay: 1s;
+  -o-animation-delay: 1s;
+  -ms-animation-delay: 1s;
+  animation-delay: 1s;
 }
 @-moz-keyframes animacion {
   0% {
@@ -257,5 +396,37 @@ body {
   }
   100% {
     top: 0%;
+  }
+}
+@-moz-keyframes preload {
+  0% {
+    left: -1%;
+  }
+  100% {
+    left: 101%;
+  }
+}
+@-webkit-keyframes preload {
+  0% {
+    left: -1%;
+  }
+  100% {
+    left: 101%;
+  }
+}
+@-o-keyframes preload {
+  0% {
+    left: -1%;
+  }
+  100% {
+    left: 101%;
+  }
+}
+@keyframes preload {
+  0% {
+    left: -1%;
+  }
+  100% {
+    left: 101%;
   }
 }

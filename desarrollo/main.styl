@@ -23,12 +23,23 @@ sombra-after()
   left 0
   transform rotate(-3deg) skewX(-10deg)
 
-*
-*:before
-*:after
-  box-sizing: border-box
-//---------Fuentes---------------
+retraso(x)
+  animation-delay x
 
+after-preload()
+  content ""
+  background tercero
+  display: block
+  width 20px
+  height 1em
+  position absolute
+  left -1%
+  top 0
+  z-index 1
+  border-radius 50%
+  animation: 1s preload infinite
+
+//---------Fuentes---------------
 @font-face
   font-family 'iconos'
   src  url('../fonts/icomoon.eot?2w6nnh')
@@ -37,6 +48,10 @@ sombra-after()
        url('../fonts/icomoon.woff?2w6nnh') format('woff'),
        url('../fonts/icomoon.svg?2w6nnh#icomoon') format('svg')
 
+*
+*:before
+*:after
+  box-sizing: border-box
 
 body
   background segundo
@@ -51,12 +66,12 @@ body
   display flex
   flex-direction column
   align-items center
-  padding 4em 2em
+  padding 2.6em 2em
   color segundo
   text-align: center
   box-shadow 0 0 10px black
   position relative
-  margin-bottom 1em
+  margin-bottom 2em
   &::before
   &::after
     sombras()
@@ -69,15 +84,15 @@ body
 
   h1
     font-weight 900
-    margin 1.5em 0
+    margin 1em 0
 
   p
     margin 0
     font-weight: 400
 
 .avatar
-  width 150px
-  height 270px
+  width 120px
+  height 200px
   border 1px solid #00b2a6
   border-radius 10px
   display flex
@@ -124,7 +139,7 @@ body
   width 32px
   height 64px
   position relative
-  top 30px
+  top 15px
   overflow hidden
   &::before
     content "\e902"
@@ -140,7 +155,7 @@ body
   flex-direction: column
   align-items center
   position relative
-  margin-bottom 1em
+  margin-bottom 2em
   &::before
   &::after
     sombras()
@@ -155,6 +170,10 @@ body
   h3
   p
     text-align: center
+    margin .5em
+
+  p
+    padding-bottom 1.5em
 
 .menu
   width 100%
@@ -178,8 +197,35 @@ body
   width 100px
   height 2px
   background lightgrey
+  margin .8em
 
+.logo
+  width 100%
+  img
+    width 70%
+    margin 0 auto
+    display:  block
 
+.habilidades
+  ul
+    padding  0 0 .5em
+    margin .5em 0 1.5em 0s
+    width 100%
+    display: flex
+    flex-direction: column
+    align-items: flex-end
+  li
+    background primero
+    width 80%
+    height 1em
+    margin 1em
+    position relative
+    overflow hidden
+    for n in (1..5)
+      &:nth-child({n})
+        &::after
+          after-preload()
+          retraso((n*0.2)s)
 
 @keyframes animacion
   0%
@@ -190,3 +236,9 @@ body
     top 50%
   100%
     top 0%
+
+@keyframes preload
+    0%
+      left -1%
+    100%
+      left 101%
