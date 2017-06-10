@@ -14,8 +14,9 @@ body
       .arriba
       .centro
       .abajo
-    h1 Juan A. García
-    p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste, amet.
+    .titular
+      h1 Juan A. García
+      p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste, amet.
     .animacion
 
   main.contenedor
@@ -41,50 +42,65 @@ body
             a(href="#")
               img(src="./public/images/stylus.png", alt="")
 
-    section.detalle
+    section.detalle.contenido
       figure.logo
         img(src="./public/images/html.png", alt="")
-      h3  HTML
-      .rayita
-      p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque, aliquam. Quis placeat sed recusandae fugit, numquam repudiandae accusantium tenetur rerum in. Debitis ducimus nam eos a saepe atque, pariatur nulla!
+      .textos
+        h3  HTML
+        .rayita
+        p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque, aliquam. Quis placeat sed recusandae fugit, numquam repudiandae accusantium tenetur rerum in. Debitis ducimus nam eos a saepe atque, pariatur nulla!
 
-    section.detalle
+    section.detalle.contenido
       figure.logo
         img(src="./public/images/css.png", alt="")
-      h3  CSS
-      .rayita
-      p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum nam magni quasi, repellendus corporis illo accusantium saepe deserunt. Deleniti officiis esse quibusdam qui expedita, nulla voluptas eligendi magnam accusamus ab.
+      .textos
+        h3  CSS
+        .rayita
+        p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum nam magni quasi, repellendus corporis illo accusantium saepe deserunt. Deleniti officiis esse quibusdam qui expedita, nulla voluptas eligendi magnam accusamus ab.
 
-    section.detalle
+    section.detalle.contenido
       figure.logo
         img(src="./public/images/js.png", alt="")
-      h3  JavaScript
-      .rayita
-      p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet ratione quam nulla cum dicta nihil fugiat voluptate quos eligendi et, rerum ullam ipsum exercitationem, facere illo dolores facilis veritatis veniam.
+      .textos
+        h3  JavaScript
+        .rayita
+        p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet ratione quam nulla cum dicta nihil fugiat voluptate quos eligendi et, rerum ullam ipsum exercitationem, facere illo dolores facilis veritatis veniam.
 
-    section.detalle
+    section.detalle.contenido
       figure.logo
         img(src="./public/images/pug.svg", alt="")
-      h3  Pug
-      .rayita
-      p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste facilis necessitatibus ipsam voluptates modi quasi harum quisquam quo dolore eius, saepe ex sed similique rem animi eum temporibus cum, ut.
+      .textos
+        h3  Pug
+        .rayita
+        p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste facilis necessitatibus ipsam voluptates modi quasi harum quisquam quo dolore eius, saepe ex sed similique rem animi eum temporibus cum, ut.
 
-    section.detalle
+    section.detalle.contenido
       figure.logo
         img(src="./public/images/stylus.png", alt="")
-      h3  Stylus
-      .rayita
-      p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse vero iure id reiciendis aperiam repudiandae dicta libero. Explicabo officia consectetur cupiditate saepe, voluptates, veniam, dolore consequuntur velit ex temporibus debitis.
+      .textos
+        h3  Stylus
+        .rayita
+        p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse vero iure id reiciendis aperiam repudiandae dicta libero. Explicabo officia consectetur cupiditate saepe, voluptates, veniam, dolore consequuntur velit ex temporibus debitis.
 
     section.detalle.habilidades
       h3 Habilidades
       .rayita
       ul
         li
+        .icono-lista
+          img(src="./public/images/html.png", alt="")
         li
+        .icono-lista
+          img(src="./public/images/css.png", alt="")
         li
+        .icono-lista
+          img(src="./public/images/js.png", alt="")
         li
+        .icono-lista
+          img(src="./public/images/pug.svg", alt="")
         li
+        .icono-lista
+          img(src="./public/images/stylus.png", alt="")
 
     section.detalle.contacto
       h3 Lorem ipsum dolor sit.
@@ -92,23 +108,23 @@ body
       p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat rerum, reprehenderit sit, voluptatum harum alias molestias unde totam ex dolorum! Voluptatibus dicta, adipisci debitis iusto.
 
       form(action="", class="formulario")
-        label(for="") Nombre:
-        input(type="text")
-        label(for="") Correo:
-        input(type="email")
-        label(for="") Comentarios
-        textarea(name="", cols="30", rows="10")
+        label(for="nombre") Nombre:
+        input#nombre(type="text")
+        label(for="correo") Correo:
+        input#correo(type="email")
+        label(for="comentarios") Comentarios:
+        textarea#comentarios(name="", cols="30", rows="10")
 
   footer.pie
     nav.redes
       ul
         li
-          a(href="#") red1
+          a(href="#")
         li
-          a(href="#") red2
+          a(href="#")
         li
-          a(href="#") red3
+          a(href="#")
         li
-          a(href="#") red4
+          a(href="#")
 
-    p &copy; Lorem ipsum dolor sit amet, consectetur.
+    small &copy; Lorem ipsum dolor sit amet, consectetur.
