@@ -53,7 +53,7 @@ body
   display flex
   flex-direction column
   align-items center
-  padding 2.5em 2em
+  padding 4em 2em 0
   color segundo
   text-align: center
   box-shadow 0 0 10px black
@@ -311,32 +311,44 @@ body
 @media (orientation landscape)
   .cabecera
     display: grid
-    grid-template-columns 60vw 1fr
-    grid-template-rows 1f 1fr
+    grid-template-columns 3fr 1fr
+    grid-template-rows 4fr 1fr
     &::before
     &::after
       sombras(10px)
+
   .titular
     grid-column 1 / 2
     grid-row 1 / 2
     padding-right 1.5em
+    position relative
+    top -15px
+
   .avatar
     grid-column 2 / 3
     grid-row 1 /2
+
   .animacion
     grid-column 1 / 3
     grid-row 2 / 3
     margin 0 auto
-    top -10px
-  .detalle.contenido
+    top -30px
+
+  .contenido
     flex-direction: row
     .rayita
       display: none
+    &:nth-child(1)
+    &:nth-child(3)
+    &:nth-child(5)
+      flex-direction: row-reverse
+
   .logo
     margin 1em
     width auto
     img
       width 150px
+
   .habilidades ul
     padding: 0 3.5em 0.5em 3.5em;
 
